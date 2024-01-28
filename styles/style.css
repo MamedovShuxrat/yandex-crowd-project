@@ -676,22 +676,24 @@
 
 .participants__cards-wrapper {
   display: flex;
-  border: 1px solid red;
   -moz-column-gap: 38px;
        column-gap: 38px;
+}
+
+.carousel__counter {
+  color: #D6D6D6;
+}
+
+.count-1 {
+  color: #1F1F1F;
 }
 
 .participants-overflow {
   overflow: hidden;
 }
 
-.carousel__btn-wrapper_mobile {
-  display: none;
-}
-
 .card__item {
   flex: 1 0 calc(33.33% - 38px);
-  border: 1px solid rgb(0, 0, 0);
   padding: 0 37px;
 }
 
@@ -743,6 +745,7 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 120%;
+  cursor: pointer;
 }
 .card__btn:hover {
   background-color: #3057A2;
@@ -770,7 +773,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex: 1 0 50%;
+    flex: 1 0 calc(50% - 20px);
   }
   .card__name {
     font-size: 20px;
@@ -784,16 +787,16 @@
   .card__item {
     flex: 1 0 100%;
   }
+  .participants {
+    position: relative;
+  }
   .participants__title {
     font-size: 36px;
   }
   .carousel__btn-wrapper {
-    display: none;
-  }
-  .carousel__btn-wrapper_mobile {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
+    position: absolute;
+    bottom: 10px;
+    right: 90px;
   }
 }
 .footer__inner {
@@ -832,7 +835,6 @@ img {
 .container {
   max-width: 1366px;
   margin: 0 auto;
-  border: 1px solid #000;
 }
 
 .text__runner {
