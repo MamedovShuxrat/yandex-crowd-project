@@ -134,7 +134,10 @@
 @media (max-width: 375px) {
 
     .header {
+        max-width: 375px;
         height: 800px;
+        background-position: top;
+
     }
 
     .header__inner {

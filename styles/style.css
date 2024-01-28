@@ -134,7 +134,9 @@
 }
 @media (max-width: 375px) {
   .header {
+    max-width: 375px;
     height: 800px;
+    background-position: top;
   }
   .header__inner {
     padding: 18px 20px 0;
@@ -666,8 +668,6 @@
 
 .participants__cards-wrapper {
   display: flex;
-  -moz-column-gap: 38px;
-       column-gap: 38px;
   transition: all ease-in-out 0.8s;
 }
 
@@ -684,8 +684,10 @@
 }
 
 .card__item {
-  flex: 1 0 calc(33.33% - 38px);
-  padding: 0 37px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 33.33%;
 }
 
 .card__img-container {
@@ -753,10 +755,6 @@
   .participants {
     padding: 28px 36px 70px 36px;
   }
-  .participants__cards-wrapper {
-    -moz-column-gap: 20px;
-         column-gap: 20px;
-  }
   .participants__title {
     font-size: 44px;
   }
@@ -764,7 +762,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex: 1 0 calc(50% - 20px);
+    flex: 1 0 50%;
   }
   .card__name {
     font-size: 20px;
