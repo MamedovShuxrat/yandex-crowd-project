@@ -1,0 +1,143 @@
+.header {
+    margin: 0 auto;
+    width: 1366px;
+    height: 700px;
+    background: center / cover no-repeat url('../images/header-bg.png');
+}
+
+.header__inner {
+    padding: 26px 72px 0;
+}
+
+.header__wrapper {
+    margin-top: 62px;
+    max-width: 542px;
+}
+
+.header__title {
+    color: $darken;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    text-transform: uppercase;
+}
+
+.header__title-center {
+    margin-left: 91px;
+}
+
+.header__title-right {
+    margin-left: 30px;
+    margin-bottom: 24px;
+}
+
+.header__desc {
+    color: $darken;
+    text-align: center;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: "Golos Text";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    margin-bottom: 40px;
+}
+
+.header__btn-wrapper {
+    display: flex;
+    margin-bottom: 130px;
+}
+
+.header__btn {
+    padding: 20px 50px;
+    border-radius: 66px;
+    background: $dark;
+    border: 1px solid $dark;
+    max-width: 263px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.support-btn {
+    color: $light;
+    text-align: center;
+    font-family: "Golos Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    margin-right: 16px;
+    transition: all ease-in-out .3s;
+
+    &:hover {
+        background-color: $yellow;
+        color: $dark;
+        border: 1px solid $yellow;
+
+
+    }
+}
+
+.more-about {
+    color: $dark;
+    text-align: center;
+    font-family: "Golos Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    background-color: inherit;
+    transition: all ease-in-out .3s;
+
+    &:hover {
+        background-color: $dark;
+        color: $light;
+        border: 1px solid $dark;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header {
+        background-position: top right;
+
+
+    }
+
+    .header__inner {
+        padding: 18px 36px 0;
+    }
+
+    .header__wrapper {
+        margin-top: 40px;
+        max-width: 335px;
+    }
+
+    .header__title {
+        font-size: 36px;
+    }
+
+    .header__btn-wrapper {
+        flex-wrap: wrap;
+        row-gap: 14px;
+    }
+
+    .header__btn {
+        max-width: 335px;
+        width: 100%;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .header {
+        height: 800px;
+    }
+
+    .header__inner {
+        padding: 18px 20px 0;
+    }
+}

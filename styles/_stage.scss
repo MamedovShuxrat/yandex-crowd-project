@@ -1,0 +1,348 @@
+.stage {
+    padding: 0 72px 165px;
+}
+
+.stage__title-wrapper {
+    max-width: 806px;
+    margin-bottom: 54px;
+}
+
+.stage__title {
+    color: $darken;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Merriweather;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+
+.stage__title-quote {
+    display: inline-block;
+    max-width: 280px;
+    color: #3057A2;
+    font-variant-numeric: lining-nums proportional-nums;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: "Golos Text";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+
+.stage__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.stage__item {
+    padding: 20px 20px 20px 77px;
+    color: $darken;
+    font-family: "Golos Text";
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 120%;
+    background: url('../images/grid-bg.png'), lightgray -234.21px -402.269px / 121.971% 265.886% no-repeat;
+
+
+}
+
+.grid__btn-wrapper {
+    display: none;
+}
+
+.grid-1,
+.grid-2,
+.grid-3,
+.grid-4,
+.grid-5,
+.grid-6,
+.grid-7 {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        top: 11px;
+        left: 12px;
+        width: 36px;
+        height: 36px;
+        background-color: $light;
+        font-weight: 700;
+        color: $dark;
+        content: '1';
+        padding: 11px 12px;
+        border-radius: 60px;
+        font-family: "Golos Text";
+        font-size: 20px;
+        font-style: normal;
+        line-height: 120%;
+        text-align: center;
+    }
+}
+
+.grid-2 {
+    &::before {
+        content: '2';
+    }
+}
+
+
+.grid-2-mobile {
+    display: none;
+}
+
+.grid-3 {
+    grid-row: span 2;
+
+    &::before {
+        content: '3';
+    }
+}
+
+.grid-4 {
+    &::before {
+        content: '4';
+    }
+}
+
+.grid-5 {
+    &::before {
+        content: '5';
+    }
+}
+
+.grid-6 {
+    &::before {
+        content: '6';
+    }
+}
+
+.grid-7 {
+    grid-column: span 2;
+
+    span {
+        display: block;
+        max-width: 440px;
+    }
+
+    &::before {
+        content: '7';
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -84px;
+        right: -66px;
+        display: block;
+        width: 374px;
+        height: 200px;
+        background: center / cover no-repeat url('../images/stage-bg.png');
+    }
+}
+
+@media (max-width: 768px) {
+    .stage {
+        padding: 0 36px;
+    }
+
+    .stage__title {
+        font-size: 44px;
+    }
+
+    .stage__container {
+        gap: 5px;
+    }
+
+    .stage__item {
+        padding: 15px 15px 15px 60px;
+        font-size: 18px;
+    }
+
+    .grid-1,
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-5,
+    .grid-6,
+    .grid-7 {
+
+        &::before {
+            top: 9px;
+            left: 5px;
+            width: 22px;
+            height: 22px;
+            font-size: 18px;
+
+        }
+
+    }
+
+    .grid-7 {
+        padding: 20px 15px 15px 60px;
+
+        &::after {
+            top: -160px;
+            right: -22px;
+            width: 310px;
+
+        }
+    }
+
+
+}
+
+@media (max-width: 375px) {
+    .stage {
+        padding: 120px 20px 0;
+    }
+
+    .stage__title {
+        font-size: 36px;
+    }
+
+    .stage__container {
+        display: flex;
+    }
+
+    .stage__title-wrapper {
+        margin-bottom: 0;
+    }
+
+    .grid-1,
+    .grid-2,
+    .grid-3,
+    .grid-4,
+    .grid-5,
+    .grid-6,
+    .grid-7,
+    .grid-mobile {
+        flex: 1 0 calc(100% - 5px);
+    }
+
+    .grid__btn-wrapper {
+        display: flex;
+        margin-top: 25px;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .grid__dots {
+        width: 10px;
+        height: 10px;
+        background-color: $gray;
+        border-radius: 50%;
+        margin: 0 3px;
+        transition: all ease-in-out .3s;
+    }
+
+    .dots-active {
+        background-color: $darken;
+    }
+
+    .grid__btn {
+        border: none;
+        width: 44px;
+        height: 44px;
+        background-color: $darken;
+        border-radius: 44px;
+        cursor: pointer;
+        transition: background-color ease-in-out .3s;
+
+        &:hover {
+            background-color: $yellow;
+        }
+
+    }
+
+    .grid__btn-right {
+        position: relative;
+        margin-left: 15px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 14px;
+            right: 16px;
+            width: 9px;
+            height: 17px;
+            background: center / cover no-repeat url('../images/arrow-right.png');
+        }
+    }
+
+    .grid__btn-left {
+        position: relative;
+        margin-right: 15px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 14px;
+            right: 19px;
+            width: 9px;
+            height: 17px;
+            background: center / cover no-repeat url('../images/arrow-left.png');
+        }
+
+    }
+
+    .grid-2-mobile {
+        display: block;
+        margin-left: -60px;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .stage__title {
+        margin-bottom: 0;
+    }
+
+    .stage__swipper {
+        padding-top: 100px;
+        position: relative;
+        overflow-x: hidden;
+
+        &::before {
+            position: absolute;
+            content: '';
+            background: center / cover no-repeat url('../images/stage-bg.png');
+            top: 43px;
+            right: 50px;
+            width: 240px;
+            height: 123px;
+            z-index: 5;
+        }
+    }
+
+
+
+    .grid-1::before,
+    .grid-2::before,
+    .grid-3::before,
+    .grid-4::before,
+    .grid-5::before,
+    .grid-6::before,
+    .grid-7::before {
+        top: 55px;
+    }
+
+    .grid-5 {
+        margin-left: -60px;
+    }
+
+    .grid-7::after {
+        display: none;
+    }
+
+    .stage__item {
+        padding: 60px 15px 15px 60px;
+    }
+
+}

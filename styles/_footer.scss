@@ -1,0 +1,17 @@
+.footer__inner {
+    padding: 40px 72px 72px;
+    color: $darken;
+    font-family: "Golos Text";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+    opacity: 0.6;
+
+}
+
+@media (max-width: 375px) {
+    .footer__inner {
+        padding: 40px 20px 60px;
+    }
+
+}

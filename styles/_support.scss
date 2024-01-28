@@ -1,0 +1,207 @@
+.support {
+    padding: 160px 72px 200px 45px;
+}
+
+.support__title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 44px;
+}
+
+.support__title-wrapper-mobile {
+    display: none;
+}
+
+.support__title {
+    max-width: 764px;
+    color: $darken;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    text-transform: uppercase;
+}
+
+.support__title-img {
+    max-width: 394px;
+}
+
+.quote {
+    color: $accent;
+}
+
+.support__wrapper {
+    display: flex;
+}
+
+.support__visual {
+    margin-right: 40px;
+}
+
+.support__table {
+    margin: 60px 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.support__item {
+    width: 50%;
+}
+
+.support__desc {
+    border-right: 2px solid $gray;
+}
+
+.support__placehold {
+    border-bottom: 2px solid $gray;
+    border-right: 2px solid $gray;
+    color: $darken;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: "Golos Text";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 120%;
+    padding: 16px 16px 16px 0;
+
+
+    &::before {
+        width: 100%;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $gray;
+
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+}
+
+.support__text {
+    padding: 16px;
+    border-bottom: 2px solid $gray;
+    color: $darken;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: "Golos Text";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.strikeout {
+    text-decoration: line-through;
+    text-decoration-color: red;
+    position: relative;
+
+}
+
+.support__link {
+    color: $blue;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: "Golos Text";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    text-decoration: none;
+    transition: all ease-in-out .3s;
+
+    &:hover {
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    }
+}
+
+@media (max-width: 768px) {
+    .support {
+        padding: 80px 36px;
+    }
+
+    .support__title {
+        font-size: 28px;
+    }
+
+    .support__wrapper {
+        flex-wrap: wrap;
+    }
+
+    .support__content {
+        .support__title {
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .support {
+        padding: 70px 20px 0 20px;
+    }
+
+    .support__title-wrapper {
+        display: none;
+    }
+
+    .support__title-wrapper-mobile {
+        display: block;
+    }
+
+    .support__title-img,
+    .support__img {
+        max-width: 335px;
+        margin: 24px auto;
+    }
+
+    .support__visual {
+        margin-top: 34px;
+    }
+
+    .support__item {
+        width: 100%;
+
+        &:nth-child(7) {
+            width: 50%;
+            border-bottom: 2px solid $gray;
+
+        }
+
+        &:nth-child(8) {
+            width: 50%;
+
+        }
+    }
+
+    .support__table {
+        margin: 20px 0 40px;
+    }
+
+    .support__placehold {
+        border: none;
+        font-size: 20px;
+        padding: 12px 12px 12px 0;
+
+    }
+
+    .support__text {
+        padding: 12px 12px 12px 0;
+
+    }
+
+    .support__link {
+        font-size: 18px;
+    }
+
+
+}
