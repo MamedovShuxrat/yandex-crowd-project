@@ -207,17 +207,7 @@
   line-height: 120%;
   padding: 16px 16px 16px 0;
 }
-.support__placehold::before {
-  width: 100%;
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #D6D6D6;
-}
-.support__placehold:last-child {
+.support__placehold:nth-child(9) {
   border-bottom: none;
 }
 
@@ -678,6 +668,7 @@
   display: flex;
   -moz-column-gap: 38px;
        column-gap: 38px;
+  transition: all ease-in-out 0.8s;
 }
 
 .carousel__counter {
