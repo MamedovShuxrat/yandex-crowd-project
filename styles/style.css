@@ -14,7 +14,8 @@
 }
 .header {
   margin: 0 auto;
-  width: 1366px;
+  max-width: 1366px;
+  width: 100%;
   height: 700px;
   background: center/cover no-repeat url("../images/header-bg.png");
 }
@@ -110,7 +111,8 @@
 
 @media (max-width: 768px) {
   .header {
-    max-width: 750px;
+    width: 100%;
+    max-width: 768px;
     height: 695px;
     background-position: top center;
   }
@@ -134,10 +136,17 @@
     white-space: nowrap;
   }
 }
-@media (max-width: 375px) {
+@media (min-width: 320px) and (max-width: 425px) {
   .header {
-    max-width: 366px;
-    height: 840px;
+    width: 100%;
+    max-width: 375px;
+    height: 800px;
+  }
+  .header__title {
+    font-size: 30px;
+  }
+  .header__title-right {
+    margin-left: 0;
   }
   .header__inner {
     padding: 18px 20px 0;
@@ -250,6 +259,21 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+@media (max-width: 1024px) {
+  .support__title-wrapper,
+  .support__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .support__title-img {
+    margin-top: 30px;
+  }
+  .support__content {
+    margin-top: 30px;
+    text-align: center;
+  }
+}
 @media (max-width: 768px) {
   .support {
     padding: 80px 36px;
@@ -257,14 +281,11 @@
   .support__title {
     font-size: 28px;
   }
-  .support__wrapper {
-    flex-wrap: wrap;
-  }
   .support__content .support__title {
     margin-top: 20px;
   }
 }
-@media (max-width: 375px) {
+@media (min-width: 320px) and (max-width: 425px) {
   .support {
     padding: 70px 20px 0 20px;
   }
@@ -517,6 +538,7 @@
     width: 22px;
     height: 22px;
     font-size: 18px;
+    z-index: 11;
   }
   .grid-7 {
     padding: 20px 15px 15px 60px;
@@ -527,7 +549,7 @@
     width: 310px;
   }
 }
-@media (max-width: 375px) {
+@media (min-width: 320px) and (max-width: 768px) {
   .stage {
     padding: 120px 20px 0;
   }
@@ -821,7 +843,7 @@
     height: auto;
   }
 }
-@media (max-width: 375px) {
+@media (min-width: 320px) and (max-width: 425px) {
   .card__item {
     flex: 1 0 100%;
   }
@@ -830,6 +852,9 @@
   }
   .participants__title {
     font-size: 36px;
+  }
+  .card__img-container {
+    box-shadow: none;
   }
   .carousel__btn-wrapper {
     position: absolute;
@@ -871,6 +896,7 @@ img {
 }
 
 .container {
+  width: 100%;
   max-width: 1366px;
   margin: 0 auto;
 }
@@ -909,6 +935,9 @@ img {
   }
 }
 @media (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
   .text__runner {
     padding: 10px;
     margin-top: 0;
@@ -917,7 +946,15 @@ img {
     font-size: 16px;
   }
 }
-@media (max-width: 375px) {
+@media (min-width: 320px) and (max-width: 375px) {
+  .container {
+    max-width: 375px;
+  }
+  .text__runner-mt {
+    margin-top: 250px;
+  }
+}
+@media (min-width: 375px) and (max-width: 425px) {
   .text__runner-mt {
     margin-top: 270px;
   }

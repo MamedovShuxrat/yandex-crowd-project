@@ -25,6 +25,7 @@ img {
 }
 
 .container {
+    width: 100%;
     max-width: 1366px;
     margin: 0 auto;
 }
@@ -84,6 +85,11 @@ img {
 }
 
 @media (max-width: 768px) {
+
+    .container {
+        max-width: 768px;
+    }
+
     .text__runner {
         padding: 10px;
         margin-top: 0;
@@ -94,8 +100,18 @@ img {
     }
 }
 
-@media (max-width: 375px) {
 
+@media (min-width: 320px) and (max-width: 375px) {
+    .container {
+        max-width: 375px;
+    }
+
+    .text__runner-mt {
+        margin-top: 250px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 425px) {
     .text__runner-mt {
         margin-top: 270px;
     }

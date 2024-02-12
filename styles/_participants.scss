@@ -222,7 +222,7 @@
     }
 }
 
-@media (max-width: 375px) {
+@media (min-width: 320px) and (max-width: 425px) {
     .card__item {
         -webkit-box-flex: 1;
         -ms-flex: 1 0 100%;
@@ -237,10 +237,15 @@
         font-size: 36px;
     }
 
+    .card__img-container {
+        box-shadow: none;
+    }
+
     .carousel__btn-wrapper {
         position: absolute;
         bottom: 10px;
         right: 90px;
     }
+
 
 }

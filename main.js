@@ -74,17 +74,29 @@ function stopAutoSlide() {
     clearInterval(autoSlideInterval)
 }
 
+// function getCardWidthPercent() {
+//     let res
+//     if (window.innerWidth < 425) {
+//         res = 100
+//     } else if (window.innerWidth > 425 && window.innerWidth < 768) {
+//         res = 50
+//     } else {
+//         res = 33.33
+//     }
+//     return res
+// }
 function getCardWidthPercent() {
     let res
-    if (window.innerWidth < 375) {
+    if (window.innerWidth < 425) {
         res = 100
-    } else if (window.innerWidth < 768) {
+    } else if (window.innerWidth > 425 && window.innerWidth <= 768) {
         res = 50
     } else {
         res = 33.33
     }
     return res
 }
+
 
 cardBtnRight.addEventListener('click', () => {
     nextCards()
