@@ -33,10 +33,67 @@
 
 
 .stage__container {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
     grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: 1fr 10px 1fr 10px 1fr;
     grid-template-rows: repeat(3, 1fr);
     gap: 10px;
+}
+
+
+.stage__container>*:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+
+
+.stage__container>*:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+}
+
+
+.stage__container>*:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+}
+
+
+.stage__container>*:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+}
+
+
+.stage__container>*:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+}
+
+
+.stage__container>*:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+}
+
+
+.stage__container>*:nth-child(7) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+}
+
+
+.stage__container>*:nth-child(8) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+}
+
+
+.stage__container>*:nth-child(9) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 5;
 }
 
 .stage__item {
@@ -96,6 +153,7 @@
 }
 
 .grid-3 {
+    -ms-grid-row-span: 2;
     grid-row: span 2;
 
     &::before {
@@ -122,6 +180,7 @@
 }
 
 .grid-7 {
+    -ms-grid-column-span: 2;
     grid-column: span 2;
 
     span {
@@ -206,6 +265,8 @@
     }
 
     .stage__container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 
@@ -221,13 +282,21 @@
     .grid-6,
     .grid-7,
     .grid-mobile {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc(100% - 5px);
         flex: 1 0 calc(100% - 5px);
     }
 
     .grid__btn-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         margin-top: 25px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
 
     }
@@ -238,6 +307,8 @@
         background-color: $gray;
         border-radius: 50%;
         margin: 0 3px;
+        -webkit-transition: all ease-in-out .3s;
+        -o-transition: all ease-in-out .3s;
         transition: all ease-in-out .3s;
     }
 
@@ -252,6 +323,8 @@
         background-color: $darken;
         border-radius: 44px;
         cursor: pointer;
+        -webkit-transition: background-color ease-in-out .3s;
+        -o-transition: background-color ease-in-out .3s;
         transition: background-color ease-in-out .3s;
 
         &:hover {

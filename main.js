@@ -33,7 +33,6 @@ gridBtnRight.addEventListener("click", () => {
 function updateSlide() {
     const translateValue = -currentIndexGrids * 100
     containerForGrids.style.transform = `translateX(${translateValue}%)`
-
     dots.forEach((dot, index) => {
         dot.classList.toggle("dots-active", index === currentIndexGrids)
     })
